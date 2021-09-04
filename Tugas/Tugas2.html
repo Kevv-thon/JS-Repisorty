@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script language="javascript">
+    function tampil(hasil) {
+        document.hitung.hasil.value = hasil
+    }
+
+    function jumlahkan(a, b) {
+        var res = a + b
+        tampil(res)
+    }
+
+    function kurangkan(a, b) {
+        var res = a - b
+        tampil(res)
+    }
+
+    function kalikan(a, b) {
+        var res = a * b
+        tampil(res)
+    }
+
+    function bagikan(a, b) {
+        var res = a / b
+        tampil(res)
+    }
+</script>
+
+<body>
+    <form method="post" name="hitung">
+        <p>Bilangan 1 <input type="text" name="nilaia" size="20"> <br></p>
+        <p>Bilangan 2 <input type="text" name="nilaib" size="20"> <br></p>
+        <p>Hasil <input type="text" name="hasil" size="20" readonly></p>
+        <br>
+        <input type="button" value="+" name="penjumlahan" onclick="jumlahkan(document.hitung.nilaia.value, document.hitung.nilaib.value)">
+
+        <input type="button" value="-" name="pengurangan" onclick="kurangkan(document.hitung.nilaia.value, document.hitung.nilaib.value)">
+
+        <input type="button" value="x" name="perkalian" onclick="kalikan(document.hitung.nilaia.value, document.hitung.nilaib.value)">
+
+        <input type="button" value="/" name="pembagian" onclick="bagikan(document.hitung.nilaia.value, document.hitung.nilaib.value)">
+
+    </form>
+</body>
+
+</html>
